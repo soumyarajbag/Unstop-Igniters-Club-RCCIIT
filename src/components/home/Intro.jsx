@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../assets/logo.jpg";
-import { BsDiscord, BsGithub , BsLink, BsLinkedin } from "react-icons/bs";
+import logo from "../../assets/logo.jpg";
+import { BsDiscord, BsGithub ,  BsLinkedin } from "react-icons/bs";
 const Intro = () => {
   return (
-    <div className="flex flex-row justify-evenly items-center mt-[150px]">
-      <div className="flex flex-col gap-5">
+    <div className="flex flex-row justify-evenly items-center mt-[150px] mb-[50px]">
+      <div className="flex flex-col gap-8">
         <h1 className=" font-bold text-4xl text-[#0addf0]">
           Unstop Igniters Club of RCCIIT
         </h1>
@@ -14,7 +14,7 @@ const Intro = () => {
           repellat nihil itaque ipsam tempore atque ipsa eius amet nisi non,
           consequatur natus! Provident, mollitia repellat. Aspernatur architecto
           neque vitae id reprehenderit repudiandae.
-          <div className="flex flex-row justify-center mt-5 space-x-10 items-center">
+          <div className="flex flex-row justify-center mt-10 space-x-10 items-center">
           <button className="px-4 py-4 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd]">
             Join Us
           </button>
