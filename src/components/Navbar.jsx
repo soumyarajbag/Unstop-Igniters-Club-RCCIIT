@@ -12,7 +12,7 @@ const Navbar = () => {
       <div>
         <img
           src={logo}
-          className="h-[100px] brightness-100 mt-2 w-[120px] rounded-full"
+          className="h-[100px] brightness-100 mt-5 w-[120px] rounded-full"
           alt=""
         />
       </div>
