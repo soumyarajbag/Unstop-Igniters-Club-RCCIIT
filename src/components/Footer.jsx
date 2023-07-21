@@ -3,7 +3,8 @@ import logo from '../assets/logo.jpg'
 import {BsGithub , BsLinkedin , BsDiscord} from 'react-icons/bs'
 const Footer = () => {
   return (
-    <div className='mt-10 mb-10'>
+    <div className='bg-[#0a2266]'>
+ <div className='pt-10 pb-5'>
 <div className='flex flex-row justify-evenly mb-5'>
         <div className='flex flex-col items-center text-white'>
             <h1 className='text-slate-400 font-semibold text-2xl'>Quick Links</h1>
@@ -49,6 +50,8 @@ const Footer = () => {
         </div>
     </div>
     </div>
+    </div>
+   
     
   )
 }

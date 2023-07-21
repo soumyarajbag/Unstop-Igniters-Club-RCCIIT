@@ -10,6 +10,7 @@ const EventCard = () => {
             <h1 className="font-semibold text-slate-400 text-xl">Date : 23rd July 2023 </h1>
             <h1 className="font-semibold text-slate-400 text-xl">Venue : Online</h1>
           </div>
+          
         </div>
 
         <div className="tracking-wider box-content mt-5">
@@ -28,6 +29,7 @@ const EventCard = () => {
       <div className="flex items-end">
         <img className="h-[350px] w-[500px]" src={logo} alt="" />
       </div>
+      
     </div>
   );
 };
