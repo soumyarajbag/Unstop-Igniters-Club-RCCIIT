@@ -6,6 +6,8 @@ import Aim from '../components/home/Aim'
 
 import Featured from '../components/home/Featured'
 
+import Cell from '../components/home/Cell'
+
 const HomePage = () => {
   return (
     <div>
@@ -13,6 +15,7 @@ const HomePage = () => {
         <Intro />
         <Aim />
         <Featured />
+        <Cell />
     </div>
   )
 }
