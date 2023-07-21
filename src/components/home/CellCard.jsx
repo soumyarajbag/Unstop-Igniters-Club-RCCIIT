@@ -3,7 +3,7 @@ import logo from '../../assets/logo.jpg';
 const CellCard = () => {
   return (
     <div className='hover:scale-105 ease-in-out duration-300'>
- <div className='w-[450px] h-[450px] border-t border-[#1a8fdd] bg-black z-0 rounded-lg'>
+ <div className='w-[450px] h-[450px] border-t duration-150  hover:border-[#1a8fdd] bg-black z-0 rounded-lg'>
   <h1 className='relative top-[5%] left-[75%] text-[#1a8fdd] font-bold text-lg hover:text-opacity-60 cursor-pointer'>View Team</h1>
 <div className='w-[450px] h-[450px] border-0 p-8 rounded-tr-full z-10 bg-[#0a2266] '>
     <div className='flex flex-col items-center gap-5'>

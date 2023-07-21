@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -19,19 +20,19 @@ const Navbar = () => {
       <div>
         <ul className="list-none hidden xl:flex flex-row justify-between space-x-10 font-semibold text-2xl items-center">
           <li className="p-4">
-            <h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
+           <Link to="/"> <h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
               Home
-            </h1>
+            </h1></Link>
           </li>
           <li className="p-4">
-            <h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
+          <Link to="/events"><h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
               Events
-            </h1>
+            </h1></Link>
           </li>
           <li className="p-4">
-            <h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
+          <Link to="/team"><h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
               Team
-            </h1>
+            </h1></Link>
           </li>
         </ul>
       </div>
