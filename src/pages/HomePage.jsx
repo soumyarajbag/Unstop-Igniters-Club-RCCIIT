@@ -9,11 +9,10 @@ import Featured from "../components/home/Featured";
 import Cell from "../components/home/Cell";
 
 
-const HomePage = () => {
+const HomePage = ({isMenuOpen}) => {
   return (
-    <div>
+    <div className={`${isMenuOpen ? 'pt-56' : '2xl:pt-[80px]'} flex   overflow-x-hidden flex-col items-center justify-center xl:gap-0 gap-20`}>
       <Intro />
-
       <Aim />
       <Featured />
       <Cell />

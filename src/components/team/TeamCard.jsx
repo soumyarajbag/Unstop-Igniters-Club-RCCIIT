@@ -4,7 +4,7 @@ import { BsDiscord, BsGithub, BsLinkedin } from 'react-icons/bs'
 import {AiOutlineArrowRight} from 'react-icons/ai'
 const TeamCard = () => {
   return (
-    <div className='border-t border-[#1a8fdd] rounded-lg hover:scale-105 shadow-md shadow-[#1a8fdd] duration-300 ease-in-out w-[300px] h-[450px] z-0 bg-black'>
+    <div className='flex flex-col items-center justify-center border-t border-[#1a8fdd] rounded-lg hover:scale-105 shadow-md shadow-[#1a8fdd] duration-300 ease-in-out w-[300px] h-[450px] z-0 bg-black'>
 <div className='flex flex-col items-center justify-center bg-[#0a2266] gap-5  w-[300px] h-[450px] rounded-tr-full z-10'>
         <div className='flex flex-col items-center gap-2'> 
             <img src={logo} className='h-[150px] w-[150px] rounded-full ' alt="" />

@@ -1,68 +1,51 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../assets/logo.jpg";
-import { FaBars, FaTimes } from "react-icons/fa";
+
+import {  Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const handleNav = () => {
-    setNav(!nav);
-  };
+export const Links = [
+  { name: "HOME", link: "/" },
+  { name: "EVENTS", link: "/events" },
+  { name: "TEAM", link: "/team" },
+  
+];
+const Navbar = ({ isMenuOpen, toggleMenu }) => {
+ 
   return (
-    <div className="flex flex-row justify-around items-center  h-24 w-full text-white p-[1rem]">
-      <div>
-        <img
-          src={logo}
-          className="h-[100px] brightness-100 mt-5 w-[120px] rounded-full"
-          alt=""
-        />
-      </div>
-      <div>
-        <ul className="list-none hidden xl:flex flex-row justify-between space-x-10 font-semibold text-2xl items-center">
-          <li className="p-4">
-           <Link to="/"> <h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
-              Home
-            </h1></Link>
-          </li>
-          <li className="p-4">
-          <Link to="/events"><h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
-              Events
-            </h1></Link>
-          </li>
-          <li className="p-4">
-          <Link to="/team"><h1 className="hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]">
-              Team
-            </h1></Link>
-          </li>
-        </ul>
-      </div>
+    <div className={`shadow-md w-full 2xl:fixed top-0 left-0  z-20 ${isMenuOpen ? 'relative' : ''}`}>
+    <div className='md:flex items-center justify-around bg-[#0a2266] py-4 md:px-10 px-7'>
 
-      <div onClick={handleNav} className="block xl:hidden">
-        {!nav ? (
-          <FaBars className="h-[25px] w-[25px] min-[1080px]:h-[40px] min-[1080px]:w-[40px] xl:h-[25px] xl:w-[25px]" />
-        ) : (
-          <FaTimes className="h-[25px] w-[25px] min-[1080px]:h-[40px] min-[1080px]:w-[40px] xl:h-[25px] xl:w-[25px]" />
-        )}
+      <div className='font-bold text-2xl cursor-pointer flex items-center gap-2  '>
+        
+        <Link to="/"><img src={logo} className='w-14 h-14  text-blue-600 rounded-full' alt='UI Logo'/></Link>
+        <div className='flex flex-col pr-4 xl:flex-row text-white'>
+          <span>Unstop &nbsp;</span>
+          <span>Igniters</span>
+        </div>
       </div>
+      
+      <div onClick={toggleMenu} className='absolute right-8 top-6 cursor-pointer md:hidden w-10 h-10'>
+        {isMenuOpen ? <XMarkIcon /> : <Bars3BottomRightIcon />}
+      </div>
+      
       <ul
-        className={
-          nav
-            ? "fixed left-0 top-0 w-[50%] h-full border-r border-r-gray-900 bg-[#000] min-[1080px]:text-5xl ease-in-out duration-500"
-            : "ease-in-out duration-500 fixed left-[-100%]"
-        }
+        className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-[#0a2266] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 scroll-smooth ease-in ${
+          isMenuOpen ? 'top-20' : 'top-[-490px]'
+        }`}
       >
-        <img
-          src={logo}
-          className="h-[100px] brightness-100  mt-2 w-[120px] rounded-full"
-          alt=""
-        />
-        <li className="p-4 min-[1080px]:p-10 border-b border-gray-600">Home</li>
-        <li className="p-4 min-[1080px]:p-10 border-b border-gray-600">
-          Events
-        </li>
-        <li className="p-4 min-[1080px]:p-10 border-b border-gray-600">Team</li>
+        {Links.map((link) => (
+          <Link to={link.link}><li className='md:ml-8 md:my-0 my-7 px-4 text-white font-semibold xl:text-xl' key={link.name}>
+            <h1 className='hover:border-b border-spacing-4 hover:border-b-white cursor-pointer hover:text-[#0addf0]'>
+              {link.name}
+            </h1>
+          </li></Link>
+        ))}
+       
       </ul>
+      
     </div>
+  </div>
   );
 };
 

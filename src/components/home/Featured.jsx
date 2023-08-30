@@ -3,7 +3,7 @@ import FeaturedCard from './FeaturedCard'
 
 const Featured = () => {
   return (
-    <div>
+    <div className='w-full'>
         <div className='text-center mt-10'>
             <h1 className='font-bold text-3xl text-[#1a8fdd]'>Our Features</h1>
         </div>

@@ -2,10 +2,12 @@ import React from "react";
 import logo from "../../assets/logo.jpg";
 import { BsDiscord, BsGithub, BsLinkedin } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
+
 const Intro = () => {
+ 
   return (
-    <div className="flex flex-row justify-evenly items-center mt-[30px] mb-[50px] h-[750px]">
-      <div className="flex flex-col gap-8 w-[580px]">
+    <div className="intro flex flex-col-reverse xl:flex-row justify-evenly  items-center gap-10 2xl:gap-[200px] mt-[60px] 2xl:mt-[30px] mb-[50px] h-[750px]">
+      <div className="flex flex-col gap-8 w-[300px] lg:w-[700px]">
         <TypeAnimation
           sequence={[
             // Same substring at the start will only be typed out once, initially
@@ -16,22 +18,24 @@ const Intro = () => {
           ]}
           wrapper="span"
           speed={200}
-          style={{ fontSize: "2.25rem", display: "inline-block" }}
-          className="font-bold text-4xl text-[#0addf0]"
+          style={{ display: "inline-block" }}
+          className="font-bold text-2xl lg:text-4xl w-[300px] lg:w-[700px]  text-[#0addf0]"
           repeat={Infinity}
         />
         {/* <h1 className=" font-bold text-4xl text-[#0addf0]">
           Unstop Igniters Club of RCCIIT
         </h1> */}
 
-        <p className="text-white  font-semibold text-xl w-[450px]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
-          fugit esse debitis laudantium hic unde sequi provident, facere rem
-          excepturi autem asperiores beatae repellendus. Amet eos officia modi
-          quas esse. Iusto, ab eligendi nostrum veniam quidem corporis quibusdam
-          perspiciatis velit.
-          <div className="flex flex-row justify-center mt-10 space-x-10 items-center">
-            <button className="px-4 py-4 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd]">
+        <p className="text-white  font-semibold text-md lg:text-3xl 2xl:text-xl w-[300px] lg:w-[700px]">
+          Unstop Igniters Club is a community program by Unstop (formerly
+          Dare2Compete) that aims to foster a culture of competitiveness,
+          learning, and growth among students. It provides a platform for
+          students to showcase their talent and skills across different domains,
+          such as coding, entrepreneurship, writing, and public speaking. The
+          club also facilitates and collaborates with entities on-campus and
+          off-campus to create opportunities for students.
+          <div className="flex flex-wrap flex-row justify-center mt-10 w-[300px] lg:w-auto gap-10 items-center">
+            <button className="p-2 xl:px-4 xl:py-2 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd]">
               Join Us
             </button>
             <button className="px-4 py-2 rounded-full bg-[#6a45e4] font-bold text-xl text-white hover:bg-white hover:text-[#6a45e4] ">
@@ -48,7 +52,7 @@ const Intro = () => {
       </div>
 
       <div>
-        <img className="w-[300px] h-[300px] rounded-full" src={logo} alt="" />
+        <img className="w-[200px] h-[200px]  lg:w-[300px] lg:h-[300px] rounded-full" src={logo} alt="" />
       </div>
     </div>
   );
