@@ -1,6 +1,6 @@
 import React from 'react'
 import TeamCard from '../components/team/TeamCard'
-
+import {creative, social, sponsor, tech} from '../data/members'
 const TeamPage = ({isMenuOpen}) => {
   return (
     <div className={`${isMenuOpen ? 'pt-56' : '2xl:pt-[80px]'} flex flex-col items-center mb-10 gap`}>
@@ -18,29 +18,46 @@ const TeamPage = ({isMenuOpen}) => {
     </div>
 
     <div className='flex flex-col items-center mt-16'>
-        <h1 className='text-slate-400 font-semibold text-xl'>Tech Team</h1>
+        <h1 className='text-slate-400 font-semibold text-2xl'>Tech Team</h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
-      <TeamCard />
-      <TeamCard />
-      <TeamCard />
+      {
+       tech.map((member , index)=>{
+          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+       })
+      }
     </div>
     </div>
 
     <div className='flex flex-col items-center mt-16'>
-        <h1 className='text-slate-400 font-semibold text-xl'>Creative Team</h1>
+        <h1 className='text-slate-400 font-semibold text-xl'>Creative Cell</h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
-      <TeamCard />
-      <TeamCard />
-      <TeamCard />
+        {
+       creative.map((member , index)=>{
+          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+       })
+      }
     </div>
     </div>
 
     <div className='flex flex-col items-center mt-16'>
-        <h1 className='text-slate-400 font-semibold text-xl'>Marketing Team</h1>
+        <h1 className='text-slate-400 font-semibold text-xl'>Sponsorship & Marketing Cell</h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
-      <TeamCard />
-      <TeamCard />
-      <TeamCard />
+        {
+       sponsor.map((member , index)=>{
+          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+       })
+      }
+    </div>
+    </div>
+
+    <div className='flex flex-col items-center mt-16'>
+        <h1 className='text-slate-400 font-semibold text-xl'>Social Media Cell</h1>
+        <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
+        {
+       social.map((member , index)=>{
+          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+       })
+      }
     </div>
     </div>
     
