@@ -2,6 +2,7 @@ import React from 'react'
 import TeamCard from '../components/team/TeamCard'
 import {creative, social, sponsor, tech} from '../data/members'
 const TeamPage = ({isMenuOpen}) => {
+  
   return (
     <div className={`${isMenuOpen ? 'pt-56' : '2xl:pt-[80px]'} flex flex-col items-center mb-10 gap`}>
     <div className="">
@@ -14,6 +15,7 @@ const TeamPage = ({isMenuOpen}) => {
       <TeamCard />
       <TeamCard />
       <TeamCard />
+      
     </div>
     </div>
 
@@ -22,7 +24,7 @@ const TeamPage = ({isMenuOpen}) => {
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
       {
        tech.map((member , index)=>{
-          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+          return <TeamCard image={member.image} key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
        })
       }
     </div>
@@ -33,7 +35,7 @@ const TeamPage = ({isMenuOpen}) => {
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
         {
        creative.map((member , index)=>{
-          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+          return <TeamCard image={member.image} key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
        })
       }
     </div>
@@ -44,7 +46,7 @@ const TeamPage = ({isMenuOpen}) => {
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
         {
        sponsor.map((member , index)=>{
-          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+          return <TeamCard image={member.image} key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
        })
       }
     </div>
@@ -55,7 +57,7 @@ const TeamPage = ({isMenuOpen}) => {
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
         {
        social.map((member , index)=>{
-          return <TeamCard key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
+          return <TeamCard image={member.image} key={index} name={member.name} linkedin={member.linkedin} github={member.github} instagram={member.instagram} role={member.role} />
        })
       }
     </div>
