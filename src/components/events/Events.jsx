@@ -7,7 +7,7 @@ const Events = ({isMenuOpen}) => {
         <h1 className="text-[#1a8fdd] text-center font-bold text-4xl xl:mt-5">Our Events</h1>
       </div>
 
-      <div className="flex flex-col items-center gap-20 xl:mt-16">
+      <div className="flex flex-col items-center gap-20 xl:mt-16 mb-10">
         <EventCard />
         <EventCard />
         <EventCard />

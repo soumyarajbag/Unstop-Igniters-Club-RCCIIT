@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
-import EventsPage from "./pages/EventsPage";
+
 import TeamPage from "./pages/TeamPage";
 import Footer from "./components/Footer";
 import { useState } from "react";

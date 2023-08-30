@@ -5,8 +5,9 @@ import { TypeAnimation } from "react-type-animation";
 
 const Intro = () => {
  
+  
   return (
-    <div className="intro flex flex-col-reverse xl:flex-row justify-evenly  items-center gap-10 2xl:gap-[200px] mt-[60px] 2xl:mt-[30px] mb-[50px] h-[750px]">
+    <div id="intro"  className="intro flex flex-col-reverse xl:flex-row justify-evenly   items-center gap-10 2xl:gap-[200px] mt-[60px] 2xl:mt-[30px] mb-[50px] h-[750px]">
       <div className="flex flex-col gap-8 w-[300px] lg:w-[700px]">
         <TypeAnimation
           sequence={[
