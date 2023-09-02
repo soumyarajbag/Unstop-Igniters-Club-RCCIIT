@@ -7,7 +7,7 @@ const Events = ({isMenuOpen}) => {
   useEffect(() => {
 
     axios
-      .get("https://unstop-igniters-rcciit-server.vercel.app/events/")
+      .get("https://unstop-igniters-rcciit-server.vercel.app/events")
       .then((res) => {
         setEvents(res.data.events);
         console.log(events);
