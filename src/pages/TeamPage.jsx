@@ -10,7 +10,7 @@ const TeamPage = ({ isMenuOpen }) => {
   const [sponsor, setSponsor] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/team/")
+      .get("https://unstop-igniters-rcciit-server.vercel.app/team/")
       .then((res) => {
           setCore(res.data.members.filter((member) => member.cell === "Core Team"));
           setTech(res.data.members.filter((member) => member.cell === "Tech Cell"));
