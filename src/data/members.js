@@ -17,12 +17,12 @@ export const  tech = [
   }
   ,
     {
-      name: "Sohel Datta",
-      role: "Web Developer",
-      instagram: "https://www.instagram.com/sohel_datta17/",
-      linkedin: "https://www.linkedin.com/in/sohel-datta-68927828a/",
-      github: "https://github.com/soheldatta17",
-      image : "https://i.postimg.cc/jqghNd0V/Sohel.jpg" ,
+      "name": "Sohel Datta",
+      "role": "Web Developer",
+      "instagram": "https://www.instagram.com/sohel_datta17/",
+      "linkedin": "https://www.linkedin.com/in/sohel-datta-68927828a/",
+      "github": "https://github.com/soheldatta17",
+      "image" : "https://i.postimg.cc/jqghNd0V/Sohel.jpg" ,
     },
     {
       name: "Palas Saha",
@@ -34,12 +34,13 @@ export const  tech = [
     },
   
     {
-      name: "Sayan Adhikari",
-      role: "Chief Documentor and Drive Manager",
-      instagram: "@sayanadh_",
-      linkedin: "",
-      github: "",
-      image : "" ,
+      "cell":"Tech Cell",
+      "name": "Sayan Adhikari",
+      "role": "Chief Documentor and Drive Manager",
+      "instagram": "@sayanadh_",
+      "linkedin": "",
+      "github": "",
+      "image" : "" ,
     },
   ] 
  export const creative = [

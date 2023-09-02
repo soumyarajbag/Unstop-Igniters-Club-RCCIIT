@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EventCard from "./EventCard"
 import { events } from "../../data/events";
+import axios from "axios";
 const Events = ({isMenuOpen}) => {
+  const [events , setEvents] = useState([]);
+  useEffect(() => {
+
+    axios
+      .get("http://localhost:5000/events/")
+      .then((res) => {
+        setEvents(res.data.events);
+        console.log(events);
+      }).catch((err) => { console.log(err) } ); 
+     
+    }, []);
   return (
     <div className={`${isMenuOpen ? 'pt-60' : 'pt-[20px] 2xl:pt-[100px]'} flex   overflow-x-hidden flex-col items-center justify-center xl:gap-0 gap-12`}>
       <div className="">
@@ -11,7 +23,7 @@ const Events = ({isMenuOpen}) => {
       <div className="flex flex-col items-center gap-20 xl:mt-16 mb-10">
        {
           events.map((event ,index) => (
-            <EventCard key={index} name={event.name} date={event.date} description={event.description} image={event.image} count={event.count} winners={event.winners} mode={event.mode} coordinator={event.coordinator}  />
+            <EventCard key={index} photos={event.gallery} index={index} name={event.name} date={event.date} venue={event.venue} count={event.count} image={event.image} coordinator={event.coordinator} description={event.description} winners={event.winners} winnermembers={event.winnermembers}  />
           ))
        }
       </div>

@@ -1,12 +1,12 @@
 import React from 'react'
 import {  BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 
-const TeamCard = ({name , image , role ,linkedin , instagram , github}) => {
+const TeamCard = ({name , image , role , cell , linkedin , instagram , github}) => {
   return (
     <div className='flex flex-col items-center justify-center border-t border-[#1a8fdd] rounded-lg hover:scale-105 shadow-md shadow-[#1a8fdd] duration-300 ease-in-out w-[300px] h-[450px] z-0 bg-black'>
 <div className='flex flex-col items-center justify-center bg-[#0a2266] gap-5  w-[300px] h-[450px] rounded-tr-full z-10'>
         <div className='flex flex-col items-center gap-2'> 
-            <img src={image} className='h-[150px] w-[150px] rounded-full ' alt="" />
+            <img src={image} className='h-[150px] w-[150px] rounded-full object-cover ' alt="" />
             <h1 className='text-3xl text-center text-white font-bold '>{name}</h1>
             <h1 className='text-xl text-slate-400 font-semibold text-center'>{role}</h1>
         </div>
