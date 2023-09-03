@@ -6,6 +6,7 @@ import TeamPage from "./pages/TeamPage";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import Events from "./components/events/Events";
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,6 +15,9 @@ function App() {
   };
   return (
     <>
+   
+
+   
       <BrowserRouter>
         <Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         <Routes>
@@ -23,6 +27,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+
     </>
   );
 }
