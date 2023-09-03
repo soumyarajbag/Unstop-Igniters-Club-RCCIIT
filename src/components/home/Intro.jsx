@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.jpg";
 import { BsDiscord, BsGithub, BsLinkedin } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
+import JoinModal from "./Modals/JoinModal";
 
 const Intro = () => {
+  const [joinModal , setJoinModal] = useState(false)
+  const openJoinModal = () => {
+    setJoinModal(true);
+  }
+  const closeJoinModal = () => {
+    setJoinModal(false);
+  }
  
   
   return (
@@ -36,7 +44,7 @@ const Intro = () => {
           club also facilitates and collaborates with entities on-campus and
           off-campus to create opportunities for students.
           <div className="flex flex-wrap flex-row justify-center mt-10 w-[300px] lg:w-auto gap-10 items-center">
-            <button className="p-2 xl:px-4 xl:py-2 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd]">
+            <button onClick={openJoinModal} className="p-2 xl:px-4 xl:py-2 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd]">
               Join Us
             </button>
             <button className="px-4 py-2 rounded-full bg-[#6a45e4] font-bold text-xl text-white hover:bg-white hover:text-[#6a45e4] ">
@@ -55,6 +63,7 @@ const Intro = () => {
       <div>
         <img className="w-[200px] h-[200px]  lg:w-[300px] lg:h-[300px] rounded-full" src={logo} alt="" />
       </div>
+      {joinModal && <JoinModal closeJoinModal={closeJoinModal} />}
     </div>
   );
 };
