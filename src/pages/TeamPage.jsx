@@ -1,16 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TeamCard from "../components/team/TeamCard";
-import BeatLoader from "react-spinners/BeatLoader";
+
 import CircleLoader from "react-spinners/CircleLoader";
 import axios from "axios";
+import NET from 'vanta/dist/vanta.net.min'
 
 const TeamPage = ({ isMenuOpen }) => {
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(NET({
+        el: myRef.current,
+        mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: "#01071c",
+  color: "#0addf0",
+  maxDistance: 19.00,
+  spacing: 20.00
+      }))}} , [vantaEffect])
+    
+
   const [core , setCore] = useState([]);
   const [tech, setTech] = useState([]);
   const [creative, setCreative] = useState([]);
   const [social, setSocial] = useState([]);
   const [sponsor, setSponsor] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [fetching, setFetching] = useState(true);
  
   useEffect(() => {
     axios
@@ -21,18 +43,20 @@ const TeamPage = ({ isMenuOpen }) => {
           setCreative(res.data.members.filter((member) => member.cell === "Creative Cell"));
           setSocial(res.data.members.filter((member) => member.cell === "Social Media Cell"));
           setSponsor(res.data.members.filter((member) => member.cell === "Sponsorship & Marketing Cell"));
+          setFetching(false);
          
       }).catch((err) => { console.log(err) } );
     }, []);
     setTimeout(() => { setLoading(false);  }, 3000);
   return (
     <>
-    {loading ?<div className="flex flex-col items-center gap-5 justify-center h-screen "><CircleLoader
+    <div ref={myRef} >
+    { loading && fetching ?<div  className="flex flex-col items-center gap-5 justify-center h-screen "><CircleLoader
   color="#1a8fdd"
   size={100}
 />
 <h1 className=" text-2xl text-[#1a8fdd] font-bold">Loading Unstoppables...</h1>
-</div> :<div
+</div> :<div 
       className={`${
         isMenuOpen ? "pt-56" : "2xl:pt-[80px]"
       } flex flex-col items-center mb-10 gap`}
@@ -131,6 +155,7 @@ const TeamPage = ({ isMenuOpen }) => {
         </div>
       </div>
     </div>}
+    </div>
     </>
   );
 };

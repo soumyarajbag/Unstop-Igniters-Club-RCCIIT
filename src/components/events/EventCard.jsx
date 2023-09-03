@@ -38,7 +38,7 @@ const EventCard = ({ index , name , photos , date , description , image , view ,
           </div>
           <div>
           {(photos=="")?
-            <a href={view}  className="px-3 py-2 text-lg bg-blue text-white rounded-xl bg-blue-500">View</a>
+            <a href={view} target="_blank" rel="noreferrer"  className="px-3 py-2 text-lg bg-blue text-white rounded-xl bg-blue-500">View</a>
             :
             <button onClick={openGallery} className="px-2 py-1 bg-blue text-white rounded-xl bg-blue-500">View Gallery</button>
           }

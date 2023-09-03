@@ -40,7 +40,7 @@ const PhotoCarousel = ({ closeGallery, photos, index }) => {
             <CarouselItem>
               {photos.map((photo, index) => (
                
-<img key={index} src={photo.url} alt="" className="" />
+<img key={index} src={photo.url} alt="" className="xl:h-[600px]" />
                
                 
               ))}

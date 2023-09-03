@@ -3,7 +3,6 @@ import NET from 'vanta/dist/vanta.net.min'
 import Intro from "../components/home/Intro";
 import logo from "../assets/logo.jpg";
 import Aim from "../components/home/Aim";
-import CircleLoader from "react-spinners/CircleLoader";
 import Featured from "../components/home/Featured";
 
 import Cell from "../components/home/Cell";

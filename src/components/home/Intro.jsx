@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.jpg";
-import { BsDiscord, BsGithub, BsLinkedin } from "react-icons/bs";
+import {  BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
 import JoinModal from "./Modals/JoinModal";
 
@@ -47,15 +47,15 @@ const Intro = () => {
             <button onClick={openJoinModal} className="p-2 xl:px-4 xl:py-2 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd]">
               Join Us
             </button>
-            <button className="px-4 py-2 rounded-full bg-[#6a45e4] font-bold text-xl text-white hover:bg-white hover:text-[#6a45e4] ">
-              <BsDiscord className="h-[40px] w-[40px]" />
-            </button>
-            <button className="px-4 py-2 rounded-full bg-[#0c0b0f] font-bold text-xl text-white hover:bg-white hover:text-[#0c0b0f]">
-              <BsGithub className="h-[40px] w-[40px]" />
-            </button>
-            <button className="px-4 py-2 rounded-full bg-[#215594] font-bold text-xl text-white hover:bg-white hover:text-[#215594]">
+            <a href="https://www.facebook.com/profile.php?id=100090192732723" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd] ">
+              <BsFacebook className="h-[40px] w-[40px]" />
+            </a>
+            <a href="https://www.instagram.com/unstop_igniters/" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-full bg-[#a256c0] font-bold text-xl text-white hover:bg-white hover:text-[#a256c0]">
+              <BsInstagram className="h-[40px] w-[40px]" />
+            </a>
+            <a href="https://in.linkedin.com/company/unstop-igniters-club-rcciit" target="_blank" rel="noreferrer" className="px-4 py-2 rounded-full bg-[#215594] font-bold text-xl text-white hover:bg-white hover:text-[#215594]">
               <BsLinkedin className="h-[40px] w-[40px]" />
-            </button>
+            </a>
           </div>
         </p>
       </div>

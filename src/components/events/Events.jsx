@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import EventCard from "./EventCard"
-import { events } from "../../data/events";
+
 import CircleLoader from "react-spinners/CircleLoader";
 import axios from "axios";
 const Events = ({isMenuOpen}) => {
   const [events , setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [fetching, setFetching] = useState(true);
   useEffect(() => {
 
     axios
       .get("https://unstop-igniters-rcciit-server.vercel.app/events")
       .then((res) => {
         setEvents(res.data.events);
+        setFetching(false);
         // console.log(res.data.events)
       }).catch((err) => { console.log(err) } ); 
      
@@ -19,7 +21,7 @@ const Events = ({isMenuOpen}) => {
     setTimeout(() => { setLoading(false);  }, 3000);
   return (
     <>
-    {loading ?<div className="flex flex-col items-center gap-5 justify-center h-screen "><CircleLoader
+    {loading && fetching ?<div className="flex flex-col items-center gap-5 justify-center h-screen "><CircleLoader
   color="#1a8fdd"
   size={100}
 />
