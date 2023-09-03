@@ -26,8 +26,8 @@ const Winner = ({winnermember , index}) => {
                 
               </div>
               <div className="flex flex-row items-center gap-3">
-                <a target="_blank" rel="noreferrer" className="border-2 border-blue-400 bg-blue-700 px-2 py-1 rounded-xl" href={member.social}><FiLink /></a>
-                <a target="_blank" rel="noreferrer" href={member.link} className="border-2 border-blue-400 bg-blue-700 px-2 py-1 rounded-xl"><BiSolidPhotoAlbum /></a>
+                {member.social===""?null:<a target="_blank" rel="noreferrer" className="border-2 border-blue-400 bg-blue-700 px-2 py-1 rounded-xl" href={member.social}><FiLink /></a>}
+                {member.link===""?null:<a target="_blank" rel="noreferrer" href={member.link} className="border-2 border-blue-400 bg-blue-700 px-2 py-1 rounded-xl"><BiSolidPhotoAlbum /></a>}
               </div>
               </div>
             ))}

@@ -69,7 +69,7 @@ const TeamPage = ({ isMenuOpen }) => {
       
 
       <div className="flex flex-col items-center mt-8 xl:mt-16">
-        <h1 className="text-slate-400 font-semibold text-xl">Core Team</h1>
+        <h1 className="text-slate-400 font-semibold text-2xl">Core Team</h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
           
           {
@@ -82,7 +82,7 @@ const TeamPage = ({ isMenuOpen }) => {
       </div>
 
       <div className="flex flex-col items-center mt-16">
-        <h1 className="text-slate-400 font-semibold text-2xl">Tech Team</h1>
+        <h1 className="text-slate-400 font-semibold text-2xl">Tech Cell</h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
           {
         tech.map((member , index)=>{
@@ -95,7 +95,7 @@ const TeamPage = ({ isMenuOpen }) => {
       </div>
 
       <div className="flex flex-col items-center mt-16">
-        <h1 className="text-slate-400 font-semibold text-xl">Creative Cell</h1>
+        <h1 className="text-slate-400 font-semibold text-2xl">Creative Cell</h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
           {creative.map((member, index) => {
             return (
@@ -114,7 +114,7 @@ const TeamPage = ({ isMenuOpen }) => {
       </div>
 
       <div className="flex flex-col items-center mt-16">
-        <h1 className="text-slate-400 font-semibold text-xl">
+        <h1 className="text-slate-400 font-semibold text-2xl">
           Sponsorship & Marketing Cell
         </h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
@@ -135,7 +135,7 @@ const TeamPage = ({ isMenuOpen }) => {
       </div>
 
       <div className="flex flex-col items-center mt-16">
-        <h1 className="text-slate-400 font-semibold text-xl">
+        <h1 className="text-slate-400 font-semibold text-2xl">
           Social Media Cell
         </h1>
         <div className="flex flex-row flex-wrap justify-center items-center mt-8 gap-20 ">
