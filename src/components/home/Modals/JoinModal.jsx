@@ -1,6 +1,6 @@
 import React from 'react'
 import {GrClose} from 'react-icons/gr'
-import logo from '../../../assets/logo.jpg'
+import qr from '../../../assets/qr.jpeg'
 const JoinModal = ({closeJoinModal}) => {
   return (
     <>
@@ -21,7 +21,7 @@ const JoinModal = ({closeJoinModal}) => {
           </div>
             <div className='flex flex-col items-center justify-center gap-3'>
             <div className='flex items-center'>
-            <img src={logo} alt="" className='' />
+            <img src={qr} alt="" className='' />
           </div>
           <div>
             <a href='https://chat.whatsapp.com/DqHw7qdtqXBCZg1qgZMvao' rel='noreferrer' target='_blank' className='p-2 xl:px-4 xl:py-2 rounded-full bg-[#1a8fdd] font-bold text-xl text-white hover:bg-white hover:text-[#1a8fdd]'>Join Directly</a>
