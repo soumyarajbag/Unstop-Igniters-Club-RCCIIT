@@ -6,7 +6,7 @@ import Aim from "../components/home/Aim";
 import Featured from "../components/home/Featured";
 
 import Cell from "../components/home/Cell";
-import Slider from "../components/home/Slider";
+
 import { BeatLoader } from "react-spinners";
 
 
@@ -56,7 +56,7 @@ const HomePage = ({isMenuOpen}) => {
       <Aim />
       <Featured />
       <Cell />
-      <Slider />
+    
       </div>}
     </div>
     </>
